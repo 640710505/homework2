@@ -87,7 +87,7 @@ class _aqi extends State<aqi> {
             ),
             Text(
               city,
-              style: TextStyle(fontSize: 40, color: Colors.indigo),
+              style: const TextStyle(fontSize: 40, color: Colors.indigo),
               textAlign: TextAlign.center,
             ),
             const SizedBox(
@@ -104,7 +104,7 @@ class _aqi extends State<aqi> {
               child: Center(
                 child: Text(
                   aqis.toString(),
-                  style: TextStyle(fontSize: 50, color: Colors.white),
+                  style: const TextStyle(fontSize: 50, color: Colors.white),
                 ),
               ),
             ),
@@ -120,7 +120,7 @@ class _aqi extends State<aqi> {
             ),
             Text(
               "temperature: ${temp.toString()}",
-              style: TextStyle(fontSize: 25, color: Colors.blueGrey),
+              style: const TextStyle(fontSize: 25, color: Colors.blueGrey),
             ),
             const SizedBox(
               height: 20,
@@ -134,7 +134,7 @@ class _aqi extends State<aqi> {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
               ),
-              child: Text("Refresh",
+              child: const Text("Refresh",
                   style: TextStyle(fontSize: 25, color: Colors.white)),
             )
           ],

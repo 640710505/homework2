@@ -1,8 +1,20 @@
 import 'package:flutter/material.dart';
 import 'model/aqi.dart';
+import 'docker_fordart/trydocker.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'model/firestore.dart';
 
-
-void main() {
+// void main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+//   try {
+//     await Firebase.initializeApp();
+//     runApp(const MyApp());
+//   } catch (e) {
+//     debugPrint("Firebase Initialization Error: $e");
+//   }
+// }
+void main(){
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -19,22 +31,9 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home: const GreetingWidget(name: '640710505 Chonlachat Buangam'));
-      home: const aqi(),
+      home: const DockerApi(),
     );
   }
 }
 
-class GreetingWidget extends StatelessWidget {
-  final String name;
-  const GreetingWidget({super.key, required this.name});
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: const Text('Air Quality Index (AQI)'),
-          // backgroundColor: Colors.pink,
-        ),
-        body: Center(child: Text('Hello, $name')));
-  }
-}

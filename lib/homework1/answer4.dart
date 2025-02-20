@@ -45,29 +45,29 @@ class _MyWidgetState extends State<Profilelay> {
             ),
           ),
           // ส่วนข้อมูลติดต่อ
-          Padding(
-            padding: const EdgeInsets.all(16.0),
+          const Padding(
+            padding: EdgeInsets.all(16.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
-                  children: const [
+                  children: [
                     Icon(Icons.email, color: Colors.blue),
                     SizedBox(width: 10),
                     Text('asd@gmail.com', style: TextStyle(fontSize: 16)),
                   ],
                 ),
-                const SizedBox(height: 10),
+                SizedBox(height: 10),
                 Row(
-                  children: const [
+                  children: [
                     Icon(Icons.phone, color: Colors.blue),
                     SizedBox(width: 10),
                     Text('44534435', style: TextStyle(fontSize: 16)),
                   ],
                 ),
-                const SizedBox(height: 10),
+                SizedBox(height: 10),
                 Row(
-                  children: const [
+                  children: [
                     Icon(Icons.location_on, color: Colors.blue),
                     SizedBox(width: 10),
                     Text('5434 Bangkok', style: TextStyle(fontSize: 16)),

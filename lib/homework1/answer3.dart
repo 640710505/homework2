@@ -42,7 +42,7 @@ class _ProductLayerState extends State<ProductLayer> {
                 // First box 
                 Column(
                   children: [
-                    Container(
+                    SizedBox(
                       width: 170,
                       height: 170,
                       child: Image.network(
@@ -64,7 +64,7 @@ class _ProductLayerState extends State<ProductLayer> {
                 
                 Column(
                   children: [
-                    Container(
+                    SizedBox(
                       width: 170,
                       height: 170,
                       child: Image.network(
@@ -96,7 +96,7 @@ class _ProductLayerState extends State<ProductLayer> {
                 
                 Column(
                   children: [
-                    Container(
+                    SizedBox(
                       width: 170,
                       height: 170,
                       child: Image.network(
@@ -118,7 +118,7 @@ class _ProductLayerState extends State<ProductLayer> {
                 
                 Column(
                   children: [
-                    Container(
+                    SizedBox(
                       width: 170,
                       height: 170,
                       child: Image.network(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(Gitlayer());
+  runApp(const Gitlayer());
 }
 
 class Gitlayer extends StatelessWidget {

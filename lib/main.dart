@@ -1,39 +1,38 @@
 import 'package:flutter/material.dart';
-import 'model/aqi.dart';
-import 'docker_fordart/trydocker.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'model/firestore.dart';
-
-// void main() async {
-//   WidgetsFlutterBinding.ensureInitialized();
-//   try {
-//     await Firebase.initializeApp();
-//     runApp(const MyApp());
-//   } catch (e) {
-//     debugPrint("Firebase Initialization Error: $e");
-//   }
-// }
-void main(){
-  WidgetsFlutterBinding.ensureInitialized();
+import 'animate/traffic.dart';
+import 'animate/traf_widget.dart';
+import 'component/theme.dart';
+void main() {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  bool isDarkMode = false;
+
+  void toggleTheme() {
+    setState(() {
+      isDarkMode = !isDarkMode;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightBlue),
-        useMaterial3: true,
+      theme: isDarkMode ? AppThemes.darkTheme : AppThemes.lightTheme,
+      home: Trafficlight(
+        toggleTheme: toggleTheme,
+        isDarkMode: isDarkMode,
       ),
-      // home: const GreetingWidget(name: '640710505 Chonlachat Buangam'));
-      home: const DockerApi(),
     );
   }
 }
-
-
